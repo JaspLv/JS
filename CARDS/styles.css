@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background-color: chocolate;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns {
+  position: absolute;
+  top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 70vh;
+  background-color: none;
+}
+
+.btns button {
+  border: none;
+  border-radius: 20px;
+  height: 25px;
+}
+
+.btns button:hover {
+  cursor: pointer;
+  background-color: peru;
+  color: white;
+  height: 35px;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+  margin-top: 2%;
+}
+
+.slide {
+  height: 80vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 500ms ease-in-out;
+}
+
+
+.slide h3 {
+  position: absolute;
+  font-size: 24px;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.slide button {
+  opacity: 0;
+  margin: 20px;
+}
+
+.slide.active {
+  flex: 10;
+}
+
+.slide.active button {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.slide.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.btn_back {
+  display: none;
+}
